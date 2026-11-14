@@ -1,5 +1,6 @@
 ## 測試一：原始資料
 
+```python
 # 1. 原始資料：保留文字資料，另外建立整理後的變數。
 event_name = "  WEEKEND DINNER  "
 meal_amount = " NT$1,200 "
@@ -35,9 +36,11 @@ print(f"分攤人數：{people_count} 人")
 print(f"每人費用：{amount_per_person:.2f} 元")
 print(f"每人預算：{budget_per_person:.2f} 元")
 print(f"是否超過預算：{is_over_budget}")
+```
 
 # 測試二：只將人數改成 5 人
 
+```python
 # 1. 原始資料：保留文字資料，另外建立整理後的變數。
 event_name = "  WEEKEND DINNER  "
 meal_amount = " NT$1,200 "
@@ -73,9 +76,11 @@ print(f"分攤人數：{people_count} 人")
 print(f"每人費用：{amount_per_person:.2f} 元")
 print(f"每人預算：{budget_per_person:.2f} 元")
 print(f"是否超過預算：{is_over_budget}")
+```
 
 # 測試三：恢復 4 人，折價券改成 220 元
 
+```python
 # 1. 原始資料：保留文字資料，另外建立整理後的變數。
 event_name = "  WEEKEND DINNER  "
 meal_amount = " NT$1,200 "
@@ -111,27 +116,17 @@ print(f"分攤人數：{people_count} 人")
 print(f"每人費用：{amount_per_person:.2f} 元")
 print(f"每人預算：{budget_per_person:.2f} 元")
 print(f"是否超過預算：{is_over_budget}")
+```
+
+總額為 `1200 + 120 - 220 = 1100` 元，平均分給 4 人，每人 275 元，沒有超過 300 元預算。
 
 # 三組測試摘要
 
-import pandas as pd
-
-# 彙整三組測試的數據資料
-test_summary_data = {
-    '測試': ['第一組', '第二組', '第三組'],
-    '人數 (人)': [4, 5, 4],
-    '折價券 (元)': [100.0, 100.0, 220.0],
-    '服務費 (元)': [120.0, 120.0, 120.0],
-    '應付總額 (元)': [1220.0, 1220.0, 1100.0],
-    '每人費用 (元)': [305.0, 244.0, 275.0],
-    '超過每人預算 (300元)': [True, False, False]
-}
-
-# 建立 DataFrame
-df_summary = pd.DataFrame(test_summary_data)
-
-# 顯示綜合比較表格
-display(df_summary)
+| 測試 | 人數 | 折價券 | 服務費 | 應付總額 | 每人費用 | 超過每人預算 |
+| --- | ---: | ---: | ---: | ---: | ---: | --- |
+| 第一組 | 4 | 100 元 | 120 元 | 1,220 元 | 305 元 | `True` |
+| 第二組 | 5 | 100 元 | 120 元 | 1,220 元 | 244 元 | `False` |
+| 第三組 | 4 | 220 元 | 120 元 | 1,100 元 | 275 元 | `False` |
 
 # 程式逐步說明
 
