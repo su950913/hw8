@@ -1,4 +1,4 @@
-
+[hw8.ipynb](https://github.com/user-attachments/files/34853937/hw8.ipynb)
 {
   "cells": [
     {
